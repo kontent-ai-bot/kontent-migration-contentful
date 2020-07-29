@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Content Migration Tool 👋</h1>
+<h1 align="center">Welcome to Contentful to Kentico Kontent Migration Tool 👋</h1>
 
 Tool to migrate content + assets from Contentful CMS over to Kontent.
 

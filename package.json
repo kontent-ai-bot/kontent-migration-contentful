@@ -1,0 +1,72 @@
+{
+    "name": "content-migration-tool",
+    "version": "2.0.0",
+    "description": "CMS content migration tool, migrating from Contentful to Kentico Kontent",
+    "main": "src/index.js",
+    "license": "ISC",
+    "scripts": {
+        "program": "ts-node src/index.ts",
+        "map_content": "ts-node src/mapping/contentMapping.ts",
+        "map_asset": "ts-node src/mapping/assetMapping.ts",
+        "map_language": "ts-node src/mapping/localeMapping.ts",
+        "migrate_language": "ts-node src/migrations/createLanguages.ts",
+        "migrate_assets": "ts-node src/migrations/createAssets.ts",
+        "migrate_types": "ts-node src/migrations/createContentTypes.ts",
+        "migrate_entries": "ts-node src/migrations/createContentEntries.ts",
+        "publish_entries": "ts-node src/migrations/publishContentEntries.ts",
+        "export": "contentful space export",
+        "build": "tsc"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.ts": [
+            "tslint --fix --project tsconfig.json",
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "prettier": {
+        "semi": true,
+        "singleQuote": true,
+        "tabWidth": 4
+    },
+    "keywords": [],
+    "author": "",
+    "devDependencies": {
+        "@contentful/rich-text-html-renderer": "^13.4.0",
+        "@contentful/rich-text-types": "^14.1.0",
+        "@types/commander": "^2.12.2",
+        "@types/jest": "^25.1.4",
+        "@types/mime-types": "^2.1.0",
+        "@types/node": "^13.7.7",
+        "@types/source-map-support": "^0.5.1",
+        "commander": "^5.0.0",
+        "dotenv": "^8.2.0",
+        "husky": "^3.1.0",
+        "jest": "^25.1.0",
+        "lint-staged": "^9.5.0",
+        "mime-types": "^2.1.26",
+        "onchange": "^6.1.0",
+        "prettier": "^1.19.1",
+        "readline-sync": "^1.4.10",
+        "serve": "^11.3.0",
+        "shelljs": "^0.8.3",
+        "source-map-support": "^0.5.16",
+        "ts-jest": "^25.2.1",
+        "ts-node": "^8.6.2",
+        "tslint": "^5.20.1",
+        "tslint-config-prettier": "^1.18.0",
+        "tslint-config-standard": "^9.0.0",
+        "typescript": "^3.8.3"
+    },
+    "dependencies": {
+        "@kentico/kontent-cli": "^0.0.7",
+        "@kentico/kontent-management": "^0.3.18",
+        "contentful-cli": "^1.2.14",
+        "rxjs": "^6.5.4"
+    }
+}

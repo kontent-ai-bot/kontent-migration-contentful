@@ -1,0 +1,436 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/tech/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.5.3/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+
+      
+      
+      
+      
+      
+      
+      
+
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 align="center">Welcome to Elanco Content Migration Tool &#x1F44B;</h1>
+<p>Tool to migrate content + assets from our previous CMS over to Kontent.</p>
+<h3 class="mume-header" id="view-demo-content-migration-demo-videodocmigration_picpngdoccontent-migration-demo-720pmov"><a href="doc/content-migration-demo-720p.mov">&#x2728; View Demo <img src="doc/migration_pic.png" alt="Content Migration Demo Video"></a></h3>
+
+<h2 class="mume-header" id="prerequisites">Prerequisites</h2>
+
+<p><a href="https://yarnpkg.com/">yarn</a>, a UNIX system (on windows, this is possible by using Git Bash terminal client, or similar)</p>
+<p>cross-env.</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">yarn global add cross-env
+</pre><h2 class="mume-header" id="install">Install</h2>
+
+<ol>
+<li>
+<p>Clone this repository <code>git clone git@github.com:elanco/content-migration-tool.git</code></p>
+</li>
+<li>
+<p>cd into the project <code>cd content-migration-tool</code></p>
+</li>
+<li>
+<p>Install package dependencies</p>
+</li>
+</ol>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">yarn 
+</pre><h2 class="mume-header" id="usage">Usage</h2>
+
+<p>Start the script to run the Content migration tool program.</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">yarn program
+</pre><p><img src="doc/help.png" alt="Help screen"></p>
+<p>The project name can be whatever you want, it allows the program to organise the files and downloads using the project name as it&apos;s file path.<br>
+For example <code>Migrations/exports/[MY PROJECT NAME]</code> and <code>Migrations/mappedExports/[MY PROJECT NAME]</code></p>
+<h3 class="mume-header" id="steps">Steps</h3>
+
+<ol>
+<li>Setup Kontent config</li>
+</ol>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">yarn program -n <span class="token punctuation">[</span>PROJECT_NAME<span class="token punctuation">]</span> --kontent_setup 
+</pre><ul>
+<li>Kontent project id</li>
+<li>Kontent management token</li>
+</ul>
+<p><img src="doc/kontent_setup.png" alt="Kontent setup"></p>
+<ol start="2">
+<li>Setup Contentful config</li>
+</ol>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">yarn program -n <span class="token punctuation">[</span>PROJECT_NAME<span class="token punctuation">]</span> --contentful_setup 
+</pre><ul>
+<li>Contentful space id</li>
+<li>Contentful management token</li>
+</ul>
+<p><img src="doc/contentful_setup.png" alt="Contentful setup"></p>
+<ol start="3">
+<li>Import all content from Contentful space.</li>
+</ol>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">yarn program -n <span class="token punctuation">[</span>PROJECT_NAME<span class="token punctuation">]</span> --import
+</pre><p><img src="doc/import.png" alt="Import"></p>
+<ul>
+<li>Apply the asset flag to download assets.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">yarn program -n <span class="token punctuation">[</span>PROJECT_NAME<span class="token punctuation">]</span> --import --assets
+</pre><ol>
+<li>Migrate the content to Kentico Kontent</li>
+</ol>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">yarn program -n <span class="token punctuation">[</span>PROJECT_NAME<span class="token punctuation">]</span> --migrate
+</pre><p><img src="doc/migrate.png" alt="Migrate"></p>
+<p>Content entry and asset mapping begins, converting all the exported content to json files that Kentico Kontent&apos;s cli tool can understand.<br>
+This will update the Kentico Kontent project with all the content from contentful.</p>
+<ol start="5">
+<li>Review a summary of the migrated content, if any failures/ issues have occured.</li>
+</ol>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">yarn program -n <span class="token punctuation">[</span>PROJECT_NAME<span class="token punctuation">]</span> --summary
+</pre><p><img src="doc/summary.png" alt="Migrate"></p>
+<ol start="6">
+<li>Delete all the project files from your local machine</li>
+</ol>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">yarn program -n <span class="token punctuation">[</span>PROJECT_NAME<span class="token punctuation">]</span> --delete
+</pre><ul>
+<li>Import and Migrate in one go.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">yarn program -n <span class="token punctuation">[</span>PROJECT_NAME<span class="token punctuation">]</span> --all
+</pre><h2 class="mume-header" id="testing">Testing</h2>
+
+<p>I have tested the Migration tool with very large contentful spaces and the tool performs well, as well as an Example project, where I have tested every feature of Contentful.</p>
+<p>In cases, where there are warnings, such as no file exists for the asset (this is a situation where there has been an asset created, without any media attached whatsoever), then there is an output JSON file which features all of the content that failed to be uploaded.</p>
+<h2 class="mume-header" id="overview">Overview</h2>
+
+<p>The Content migration tool would allow for entire contentful spaces to migrate over to Kentico Kontent projects completely automated.</p>
+<p>What is migrated:</p>
+<ul>
+<li>Locales - language variations.</li>
+<li>Content Types - Models how a content entry would function.</li>
+<li>Content Items - Content entries, instances of content types that contain the information / data that would feed into applications.</li>
+<li>Assets - All the media on a project, Images, Videos, Zip Files, PDFs, etc.</li>
+</ul>
+<p>When migrating over, it will migrate the specific language variants rather than any default entries, so to find the migrated content you must toggle to the uploaded language in the Kontent UI.</p>
+<p>This is because Kontent treats locales very differently than in Contentful. And because of the nature of the migration tool achieves for a migration of hundreds of sites, it is not possible to assume that English (US) will always be the &apos;default&apos; language variant.</p>
+<h3 class="mume-header" id="locale-migration">Locale Migration</h3>
+
+<p>If a contentful space would have multiple language variants for each project, I.e. en_US, en_UK ... Then those variants will be migrated over. Within Kentico Kontent, you can then assign what language variant should be the default fallback language, or even what languages to deactivate.</p>
+<h3 class="mume-header" id="content-types">Content Types</h3>
+
+<p>These are models of what content entries should look and behave like. Holds information such as field names, and the types of those fields. Example. Title = Text Field, Date of Birth = Date Field.</p>
+<p>The migration tool would convert each of these fields to their respective Kentico Kontent field type. In some cases there are minor disrepencies.</p>
+<h4 class="mume-header" id="disrepencies">Disrepencies</h4>
+
+<ul>
+<li><strong>Arrays</strong> ([tag1, tag2, tag3])
+<ul>
+<li>There are no array element type within Kentico Kontent. A workaround is for the array to be represented as a text field, that is wrapped in square brackets. &apos;[tag1, tag2, tag3]&apos;, with comma separated items.</li>
+<li>This is the simplest and most sensible solution, architecturally, using a linkedList for arrays makes the most sense, however linked lists are quite large.</li>
+</ul>
+</li>
+<li><strong>Rich Text</strong>
+<ul>
+<li>Rich Text content is migrated over, however any attached Assets, or reference items may not be correctly migrated over. In cases where there are rich text, it is worth to double check to see if the tool handled it correctly. This is a potential work in progress.</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="content-items">Content Items</h3>
+
+<p>Content Items shoud also be mapped to their new field types. If there are contentful asset urls spotted in any text based fields, then those urls would be automatically transformed into Kentico Kontent urls that provides the same asset.</p>
+<h3 class="mume-header" id="assets">Assets</h3>
+
+<p>Assets, as long as they meet Kentico Kontent technical requirements, will all be migrated, and all the references to an existing asset in contentful will also be migrated over. So no relationships between assets, or even other content item entries are broken.</p>
+<h2 class="mume-header" id="disclaimer">Disclaimer</h2>
+
+<pre data-role="codeBlock" data-info="sh" class="language-bash">yarn program -n <span class="token punctuation">[</span>PROJECT_NAME<span class="token punctuation">]</span> --summary
+</pre><p>Files over the 100MB limit will not be uploaded, as this exceeds Kentico Kontent&apos;s asset size limit.<br>
+When running the tool, all the files that are unable to be uploaded are recorded and logged. Found in <code>/Migrations/mappedExports/NAME_OF_PROJECT/badFiles.json</code></p>
+<p>The badFiles.json file would contain asset entries that are:</p>
+<ul>
+<li>Too large.</li>
+<li>Have a poorly formatted title (I.e Title is over 50 characters / non exists )</li>
+<li>Non existing (There could be an asset entry without an asset provided / or has been deleted.)</li>
+</ul>
+<p>For assets that are too large, or have a non existing asset entry. They will not be migrated over to Kentico Kontent. If you wish to upload those manually, you must first compress the file, or in the case of a video, use a video streaming platform rather than uploading a video.</p>
+<p>For assets that have a large filename, they will be uploaded to Kentico Kontent, however the title will be shortened. The full title will appear within the description however.</p>
+<h2 class="mume-header" id="next-steps-for-migration">Next Steps for Migration</h2>
+
+<p>Now that the content is migrated over to the new CMS platform. The migration effort required now, will be to house the new CMS platform.</p>
+<p>In each site where we are currently using Contentful, we need to replace every API call with their respective Kentico Kontent API call.</p>
+<p>The codebase that exists currently does not need to change very much. This should be a Lift and Shift task rather than a complete rebuild.</p>
+<p>The Kontent API will of course have a different interface that Contentful, and the JSON format of the data is quite a bit different than Contentful, however it is possible to achieve a translation.</p>
+<h3 class="mume-header" id="the-task-required">The task required</h3>
+
+<p>Similar to how this Content Migration Tool, translates content from Contentful to a format that Kentico Kontent understands, we need to build a utilility function / middleware that is able to translate the new Kontent API JSON data, into the format that the code base is expecting the data to be in.</p>
+<p>For example. The codebase may have code such as:</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">const</span> articleText <span class="token operator">=</span> contentfulData<span class="token punctuation">.</span>article<span class="token punctuation">.</span>text
+</pre><p>However in Contentful that same method may look like:</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">const</span> articleText <span class="token operator">=</span> kontentData<span class="token punctuation">.</span>article<span class="token punctuation">.</span>value<span class="token punctuation">.</span>text<span class="token punctuation">.</span>value
+</pre><p>We need to work out the simplest possible way to achieve this result of switching out our Headless CMS.</p>
+<p>This task should be the <strong>priority</strong> as this would require the most technical challenge, as we need to ensure that the sites still function the same, and the content is unchanged.</p>
+<p>For sites that were not previously on Contentful, that is a separate challenge, that would require a rebuild step by step of converting hard coded values into values generated from the CMS.</p>
+<p>For those hard coded sites, it may benefit you from looking at how we currently generate content via the CMS in our applications, however you must know that we will be wanting to improve in how we carry that out with future sites. But for lift and shift, it is adequate.</p>
+<h2 class="mume-header" id="author">Author</h2>
+
+<p>Matthew Castrillon-Madrigal.</p>
+<p>If you have any questions or suggestions, please <a href="mailto:castrillon_madrigal_matthew@network.elanco.com">email</a> me.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

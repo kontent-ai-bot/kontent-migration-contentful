@@ -8,9 +8,9 @@ Tool to migrate content + assets from Contentful CMS over to Kontent.
 
 ## Install
 
-1. Clone this repository `git clone https://github.com/Kentico/content-migration-tool.git`
+1. Clone this repository `git clone https://github.com/Kentico/kontent-migration-contentful.git`
 
-2. cd into the project `cd content-migration-tool`
+2. cd into the project `cd kontent-migration-contentful`
 
 3. Install package dependencies
 

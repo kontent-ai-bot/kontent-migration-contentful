@@ -1,3 +1,6 @@
+## :warning: Deprecation notice
+> This repository has been archived and is no longer maintained.
+
 <h1 align="center">Welcome to Contentful to Kentico Kontent Migration Tool 👋</h1>
 
 Tool to migrate content + assets from Contentful CMS over to Kontent.
